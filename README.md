@@ -1,73 +1,158 @@
-# React + TypeScript + Vite
+# Landing Page - React + Vite + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page moderna e responsiva construída com React 19, Vite e Tailwind CSS, utilizando TypeScript para maior segurança de tipos.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19.2.0** - Biblioteca JavaScript para construção de interfaces
+- **Vite 7.2.4** - Build tool rápido e moderno
+- **TypeScript 5.9** - Superset JavaScript com tipagem estática
+- **Tailwind CSS** - Framework CSS utility-first para estilização
+- **ESLint** - Ferramenta de linting para código limpo e consistente
+- **SWC** - Compilador JavaScript rápido (via @vitejs/plugin-react-swc)
 
-## React Compiler
+## 📋 Pré-requisitos
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- Node.js >= 16.x
+- npm ou yarn
 
-## Expanding the ESLint configuration
+## 🔧 Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone o repositório:
+\`\`\`bash
+git clone <seu-repositorio>
+cd frontendTest
+\`\`\`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Instale as dependências:
+\`\`\`bash
+npm install
+\`\`\`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎯 Scripts Disponíveis
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+### Desenvolvimento
+\`\`\`bash
+npm run dev
+\`\`\`
+Inicia o servidor de desenvolvimento com HMR (Hot Module Replacement) ativado na porta `http://localhost:5173`
+
+### Build
+\`\`\`bash
+npm run build
+\`\`\`
+Compila o TypeScript e cria a build otimizada para produção na pasta `dist/`
+
+### Preview
+\`\`\`bash
+npm run preview
+\`\`\`
+Visualiza a build de produção localmente
+
+### Linting
+\`\`\`bash
+npm run lint
+\`\`\`
+Verifica o código em busca de erros e padrões de codificação
+
+## 📁 Estrutura do Projeto
+
+\`\`\`
+frontendTest/
+├── src/
+│   ├── App.tsx           # Componente principal da aplicação
+│   ├── main.tsx          # Ponto de entrada React
+│   ├── index.css         # Estilos globais
+│   └── assets/           # Imagens e outros assets
+├── public/               # Arquivos estáticos
+├── index.html            # Arquivo HTML principal
+├── package.json          # Dependências do projeto
+├── tsconfig.json         # Configuração TypeScript
+├── tsconfig.app.json     # Configuração TypeScript para a aplicação
+├── tsconfig.node.json    # Configuração TypeScript para Node
+├── vite.config.ts        # Configuração do Vite
+└── README.md             # Este arquivo
+\`\`\`
+
+## 🎨 Configurando Tailwind CSS
+
+Se o Tailwind ainda não estiver configurado, execute:
+
+\`\`\`bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+\`\`\`
+
+Atualize o arquivo `tailwind.config.js`:
+\`\`\`js
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
   },
-])
-```
+  plugins: [],
+}
+\`\`\`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Adicione as diretivas do Tailwind em `src/index.css`:
+\`\`\`css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+\`\`\`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 💡 Desenvolvimento
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Hot Module Replacement (HMR)
+O projeto está configurado com HMR do Vite, permitindo atualização instantânea do código sem recarregar a página.
+
+### TypeScript
+O projeto utiliza TypeScript em modo estrito. Todos os componentes e funções devem ter tipagem adequada.
+
+### ESLint
+Execute `npm run lint` regularmente para garantir a qualidade do código.
+
+## 🚀 Deployment
+
+### Build para Produção
+\`\`\`bash
+npm run build
+\`\`\`
+
+A pasta `dist/` contém os arquivos otimizados prontos para produção.
+
+### Deploy em Plataformas Populares
+
+**Vercel:**
+\`\`\`bash
+npm install -g vercel
+vercel
+\`\`\`
+
+**Netlify:**
+\`\`\`bash
+npm run build
+# Deploy a pasta 'dist' no Netlify
+\`\`\`
+
+## 📚 Recursos Adicionais
+
+- [Documentação React](https://react.dev)
+- [Documentação Vite](https://vite.dev)
+- [Documentação Tailwind CSS](https://tailwindcss.com/docs)
+- [Documentação TypeScript](https://www.typescriptlang.org/docs)
+
+## 📝 Licença
+
+Este projeto está sob licença MIT.
+
+## 👨‍💻 Contribuição
+
+Contribuições são bem-vindas! Para grandes mudanças, abra uma issue primeiro para discutir as alterações propostas.
+
+---
+
+**Desenvolvido com ❤️ usando React + Vite + Tailwind CSS**
