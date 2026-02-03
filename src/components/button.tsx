@@ -3,6 +3,6 @@ type ButtonProps = {
     text: string;
 }
 
-export function Button({ variant = 'primary', text }: ButtonProps){
+export function Button({ text }: ButtonProps){
     return <button >{text}</button>
 }
