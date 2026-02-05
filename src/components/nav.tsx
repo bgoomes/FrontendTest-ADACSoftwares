@@ -1,3 +1,4 @@
+import { Button } from "./button";
 
 export function Nav(){
     return (
@@ -15,7 +16,7 @@ export function Nav(){
                         <li>Contact</li>
                     </ul>
                 </nav>
-                <button className="border px-9 py-3 ml-24 cursor-pointer">Login</button>
+                <Button text="Login" className="ml-24"/>
             </div>
         </header>
     )

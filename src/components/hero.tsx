@@ -1,4 +1,5 @@
 import screen from "../assets/screens.png";
+import { Button } from "./button";
 
 export function Hero() {
     return (
@@ -12,8 +13,8 @@ export function Hero() {
                 </p>
             </div>
             <div className="flex gap-9">
-                <button className="px-9 py-4 bg-primary">Try For Free</button>
-                <button className="px-9 py-4 border">Learn More</button>
+                <Button  text="Try For Free" variant="secondary" />
+                <Button text="Learn More" />
             </div>
 
             <figure className="-mt-5">
