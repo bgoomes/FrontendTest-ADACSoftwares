@@ -2,7 +2,7 @@ import { Button } from "./button";
 
 export function Nav(){
     return (
-        <header className="h-29 flex items-center">
+        <header className="w-5xl h-29 flex items-center m-auto">
             <div className="flex items-center justify-between gap-32 px-7">
                 <figure>
                     <img src="/logo.svg" alt="Logo" />
