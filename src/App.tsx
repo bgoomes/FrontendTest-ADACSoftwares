@@ -1,3 +1,4 @@
+import { Contents } from "./components/contents";
 import { Features } from "./components/features";
 import { Hero } from "./components/hero";
 import { Nav } from "./components/nav";
@@ -8,6 +9,7 @@ export function App() {
       <Nav />
       <Hero />
       <Features />
+      <Contents />
     </main>
   )
 }
