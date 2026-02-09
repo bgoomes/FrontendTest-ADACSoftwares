@@ -1,4 +1,5 @@
 import { Contents } from "./components/contents";
+import { Cta } from "./components/cta";
 import { Features } from "./components/features";
 import { Gallery } from "./components/gallery";
 import { Hero } from "./components/hero";
@@ -14,6 +15,7 @@ export function App() {
       <Contents />
       <Gallery />
       <Partners />
+      <Cta />
     </main>
   )
 }
