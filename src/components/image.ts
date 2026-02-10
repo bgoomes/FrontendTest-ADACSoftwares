@@ -13,7 +13,6 @@ import retangulo6 from '../assets/Rectangle6.png'
 import retangulo7 from '../assets/Rectangle7.png'
 
 
-
 export type GalleryItem = {
     id: number;
     src: string;
