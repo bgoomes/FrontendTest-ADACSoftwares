@@ -1,5 +1,5 @@
 import screen from "../assets/screens.png";
-import { Button } from "./button";
+import { Button } from "../components/button";
 
 export function Hero() {
     return (

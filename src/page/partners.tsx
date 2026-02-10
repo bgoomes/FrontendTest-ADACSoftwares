@@ -1,5 +1,5 @@
-import { Button } from "./button";
-import { gallery } from "./image";
+import { Button } from "../components/button";
+import { gallery } from "../components/image";
 
 export function Partners() {
     return (

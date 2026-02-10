@@ -1,5 +1,5 @@
-import { Button } from "./button";
-import { rectangleGallery } from "./image";
+import { Button } from "../components/button";
+import { rectangleGallery } from "../components/image";
 
 export function Gallery() {
     const topRow = rectangleGallery.slice(0, 4);

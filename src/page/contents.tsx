@@ -1,4 +1,4 @@
-import { Button } from './button'
+import { Button } from '../components/button'
 
 import dassbord from '../assets/BoardsNotifications.png'
 import macbook from '../assets/Group3.png'

@@ -1,5 +1,5 @@
-import { Card } from "./card";
-import { avatar } from "./testimonial";
+import { Card } from "../components/card";
+import { avatar } from "../components/testimonial";
 
 
 export function Testimonials(){

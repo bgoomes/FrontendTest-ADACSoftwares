@@ -1,11 +1,12 @@
-import { Contents } from "./components/contents";
-import { Cta } from "./components/cta";
-import { Features } from "./components/features";
-import { Gallery } from "./components/gallery";
-import { Hero } from "./components/hero";
 import { Nav } from "./components/nav";
-import { Partners } from "./components/partners";
-import { Testimonials } from "./components/Testimonials";
+import { Hero } from "./page/hero";
+import { Features } from "./page/features";
+import { Contents } from "./page/contents";
+import { Gallery } from "./page/gallery";
+import { Partners } from "./page/partners";
+import { Testimonials } from "./page/testimonials";
+import { Cta } from "./page/cta";
+import { Footer } from "./page/footer";
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
       <Partners />
       <Testimonials />
       <Cta />
+      <Footer />
     </main>
   )
 }
